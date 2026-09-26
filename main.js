@@ -44,9 +44,38 @@ updateCountdown();
 const bgAudioPlayer = document.getElementById('bg-devotional-audio');
 const audioToggleBtn = document.getElementById('audio-toggle');
 let isAudioPlaying = false;
+let userManuallyToggled = false;
+
+function startAudio() {
+  if (!bgAudioPlayer || isAudioPlaying || userManuallyToggled) return;
+  bgAudioPlayer.play().then(() => {
+    isAudioPlaying = true;
+    if (audioToggleBtn) {
+      audioToggleBtn.classList.add('active-toggle');
+      audioToggleBtn.querySelector('.audio-text').innerText = 'MUSIC ON 🎵';
+    }
+  }).catch(err => {
+    console.log("Autoplay waiting for first user interaction:", err);
+  });
+}
+
+// Attempt immediate playback on load
+startAudio();
+
+// Also trigger playback on first user gesture anywhere on the document (click, tap, scroll, touch)
+const autoPlayEvents = ['click', 'touchstart', 'pointerdown', 'keydown', 'scroll'];
+function handleFirstUserInteraction() {
+  if (!isAudioPlaying && !userManuallyToggled) {
+    startAudio();
+  }
+  autoPlayEvents.forEach(evt => document.removeEventListener(evt, handleFirstUserInteraction));
+}
+autoPlayEvents.forEach(evt => document.addEventListener(evt, handleFirstUserInteraction, { once: true }));
 
 if (audioToggleBtn) {
-  audioToggleBtn.addEventListener('click', () => {
+  audioToggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    userManuallyToggled = true;
     if (!isAudioPlaying) {
       if (bgAudioPlayer) {
         bgAudioPlayer.play().then(() => {
