@@ -182,6 +182,10 @@
             <div class="devotional-puja-deck">
               <div class="puja-deck-title">INTERACTIVE DEVOTIONAL OFFERINGS</div>
               <div class="puja-buttons-row">
+                <button id="pooja-btn" class="puja-action-btn gold-highlight-btn">
+                  <span class="puja-icon">🔱</span>
+                  <span>PERFORM POOJA</span>
+                </button>
                 <button id="aarti-btn" class="puja-action-btn">
                   <span class="puja-icon">🪔</span>
                   <span>LIGHT AARTI</span>
@@ -194,6 +198,10 @@
                   <span class="puja-icon">🔔</span>
                   <span>RING BELL</span>
                 </button>
+                <a href="#donate" id="hundi-btn" class="puja-action-btn hundi-action-btn">
+                  <span class="puja-icon">🪙</span>
+                  <span>DONATION HUNDI</span>
+                </a>
               </div>
 
               <div class="blessing-counter-bar">
@@ -520,6 +528,28 @@
     </a>
   </div>
 
+
+  <!-- DEVOTIONAL MAHA POOJA MODAL POPUP -->
+  <div id="puja-modal" class="puja-modal-overlay" aria-hidden="true">
+    <div class="puja-modal-card">
+      <button class="modal-close-btn" id="close-puja-modal" aria-label="Close">&times;</button>
+      <div class="modal-icon">🔱 🪔</div>
+      <h3 class="modal-title telugu-serif">॥ మహాపూజ సమర్పణం ॥</h3>
+      <div class="modal-sub">Maha Pooja & Blessings Performed!</div>
+      <p class="modal-desc">
+        May Lord Sri Vara Siddhi Vinayaka Swamy bless you and your family with peace, health & divine prosperity.
+      </p>
+      
+      <div class="modal-suggestion-box">
+        <div class="sugg-tag">💡 DEVOTIONAL HUNDI SUGGESTION</div>
+        <p class="sugg-text">Support Ganesh Utsav Annadhanam & Pooja arrangements by offering Hundi Seva!</p>
+      </div>
+
+      <a href="#donate" class="btn-modal-hundi" id="modal-hundi-btn">
+        <span>🪙</span> OFFER HUNDI DONATION &rarr;
+      </a>
+    </div>
+  </div>
 
   <!-- Toast Notification -->
   <div id="toast-msg" class="toast-notification"></div>

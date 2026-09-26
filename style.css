@@ -714,6 +714,7 @@ body {
   align-items: center;
   gap: 6px;
   border-radius: 20px;
+  text-decoration: none;
   transition: all 0.2s ease;
 }
 
@@ -721,6 +722,150 @@ body {
   background-color: var(--gold-primary);
   color: var(--bg-dark);
   border-color: var(--gold-primary);
+}
+
+.gold-highlight-btn {
+  background-color: var(--gold-primary);
+  color: var(--bg-dark);
+  border-color: var(--gold-primary);
+  font-weight: 800;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
+}
+.gold-highlight-btn:hover {
+  background-color: var(--gold-hover);
+}
+
+.hundi-action-btn {
+  background: rgba(245, 158, 11, 0.18);
+  border-color: var(--gold-primary);
+  color: var(--gold-light);
+}
+
+
+/* ==========================================================================
+   DEVOTIONAL MAHA POOJA MODAL OVERLAY
+   ========================================================================== */
+
+.puja-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(13, 9, 7, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.puja-modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.puja-modal-card {
+  background: linear-gradient(135deg, #1E120B 0%, #160F0C 100%);
+  border: 2px solid var(--gold-primary);
+  border-radius: 20px;
+  padding: 32px 24px;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(245, 158, 11, 0.25);
+  transform: scale(0.9);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.puja-modal-overlay.active .puja-modal-card {
+  transform: scale(1);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  background: none;
+  border: none;
+  color: var(--gold-primary);
+  font-size: 28px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.modal-icon {
+  font-size: 38px;
+  margin-bottom: 8px;
+}
+
+.modal-title {
+  font-size: 24px;
+  color: var(--gold-primary);
+  margin-bottom: 4px;
+}
+
+.modal-sub {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.modal-desc {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.modal-suggestion-box {
+  background: rgba(245, 158, 11, 0.1);
+  border: 1.5px dashed var(--gold-primary);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.sugg-tag {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: var(--gold-primary);
+  margin-bottom: 4px;
+}
+
+.sugg-text {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.4;
+}
+
+.btn-modal-hundi {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #F59E0B 0%, #D97706 100%);
+  color: var(--bg-dark);
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+  transition: all 0.2s ease;
+}
+
+.btn-modal-hundi:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.6);
 }
 
 .blessing-counter-bar {

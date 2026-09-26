@@ -416,6 +416,61 @@ if (templeBellBtn) {
   });
 }
 
+/* Perform Pooja Handler */
+const poojaBtn = document.getElementById('pooja-btn');
+const pujaModal = document.getElementById('puja-modal');
+const closePujaModalBtn = document.getElementById('close-puja-modal');
+const modalHundiBtn = document.getElementById('modal-hundi-btn');
+
+if (poojaBtn) {
+  poojaBtn.addEventListener('click', () => {
+    // 1. Play Ganapathi devotional audio track from public folder
+    if (bgAudioPlayer) {
+      bgAudioPlayer.currentTime = 0;
+      bgAudioPlayer.play().then(() => {
+        isAudioPlaying = true;
+        if (audioToggleBtn) {
+          audioToggleBtn.classList.add('active-toggle');
+          audioToggleBtn.querySelector('.audio-text').innerText = 'MUSIC ON 🎵';
+        }
+      }).catch(err => console.log("Audio play error:", err));
+    }
+
+    // 2. Light Aarti aura & Ring temple bell chime
+    if (diyaGlow) diyaGlow.classList.add('active');
+    playTempleBellSound();
+
+    // 3. Trigger flower shower & Increment blessing count
+    initPetals();
+    if (!isPetalsActive) {
+      const petalsToggle = document.getElementById('petals-toggle');
+      if (petalsToggle) petalsToggle.click();
+    }
+    currentBlessingCount++;
+    if (blessingCountEl) blessingCountEl.innerText = currentBlessingCount;
+
+    // 4. Show Devotional Maha Pooja Modal Popup with Hundi Seva suggestion
+    if (pujaModal) {
+      pujaModal.classList.add('active');
+      pujaModal.setAttribute('aria-hidden', 'false');
+    }
+  });
+}
+
+if (closePujaModalBtn && pujaModal) {
+  closePujaModalBtn.addEventListener('click', () => {
+    pujaModal.classList.remove('active');
+    pujaModal.setAttribute('aria-hidden', 'true');
+  });
+}
+
+if (modalHundiBtn && pujaModal) {
+  modalHundiBtn.addEventListener('click', () => {
+    pujaModal.classList.remove('active');
+    pujaModal.setAttribute('aria-hidden', 'true');
+  });
+}
+
 const openUpiBtn = document.getElementById('open-upi-btn');
 const upiBox = document.getElementById('upi-box');
 if (openUpiBtn && upiBox) {
