@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOURYA BOYS — VINAYAKA CHAVITHI 2026</title>
+
+  <meta name="description" content="Mourya Boys Sri Vinayaka Chavithi 2026 at Salipeta Shuttle Court, Pendurthi. Annadhanam at 12:30 PM & Grand Nimajjanam Procession.">
+  <meta property="og:title" content="MOURYA BOYS — VINAYAKA CHAVITHI 2026">
+  <meta property="og:description" content="Swiss Typographic Invitation & Donations for Mourya Boys Ganesh Utsav 2026, Pendurthi.">
+  <meta property="og:image" content="/our_idol_nobg.png">
+  <meta name="theme-color" content="#FF5A00">
+
+  <link rel="icon" type="image/jpeg" href="/logo.jpg">
+
+  <!-- Google Fonts: Instrument Sans, Instrument Serif, Noto Serif Telugu, Noto Sans Telugu -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&family=Noto+Sans+Telugu:wght@600;700;800&family=Noto+Serif+Telugu:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- Background Devotional Audio Player - Jai Jai Ganesha Song -->
+  <audio id="bg-devotional-audio" loop preload="auto">
+    <source src="/jai_jai_ganesha.mp3" type="audio/mpeg">
+    <source src="/devotional_music.wav" type="audio/wav">
+  </audio>
+
+  <!-- Falling Marigold Petals Canvas overlay -->
+  <canvas id="petals-canvas"></canvas>
+
+  <!-- FIXED NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <img src="/logo.jpg" alt="Mourya Boys Logo" class="nav-logo-img">
+        <span class="logo-text">MOURYA BOYS</span>
+      </a>
+
+      <!-- Desktop Links -->
+      <div class="nav-links">
+        <a href="#about" class="nav-link">ABOUT</a>
+        <a href="#schedule" class="nav-link">SCHEDULE</a>
+        <a href="#gallery" class="nav-link">GALLERY</a>
+        <a href="#donate" class="nav-link">DONATE</a>
+        <a href="#contact" class="nav-link">CONTACT</a>
+      </div>
+
+      <div class="nav-actions">
+        <!-- Ganesh Songs & Vibe Toggle -->
+        <button id="audio-toggle" class="audio-btn" aria-label="Toggle Ganesh Songs">
+          <span class="eq-bars">
+            <span class="bar b1"></span>
+            <span class="bar b2"></span>
+            <span class="bar b3"></span>
+          </span>
+          <span class="audio-text">MUSIC OFF</span>
+        </button>
+
+        <button id="petals-toggle" class="audio-btn active-toggle" aria-label="Toggle Petals">
+          <span class="petal-icon">🌸</span>
+          <span class="petal-text">PETALS ON</span>
+        </button>
+
+        <a href="#donate" class="nav-donate-btn">DONATE</a>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="mobile-menu-btn" id="menu-toggle" aria-label="Toggle Navigation Menu">
+          <span class="menu-bar bar-1"></span>
+          <span class="menu-bar bar-2"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE FULLSCREEN MENU OVERLAY -->
+  <div class="mobile-menu-overlay" id="mobile-overlay" aria-hidden="true">
+    <button class="mobile-menu-close" id="menu-close">&times;</button>
+    <div class="mobile-menu-content">
+      <a href="#about" class="mobile-link">ABOUT</a>
+      <a href="#schedule" class="mobile-link">SCHEDULE</a>
+      <a href="#gallery" class="mobile-link">GALLERY</a>
+      <a href="#donate" class="mobile-link">DONATE</a>
+      <a href="#contact" class="mobile-link">CONTACT</a>
+    </div>
+  </div>
+
+
+  <!-- MAIN PAGE WRAPPER -->
+  <main class="swiss-container">
+
+    <!-- 01 — HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-top-row">
+        <span class="section-num-label">01 / MOURYA BOYS — VINAYAKA CHAVITHI 2026</span>
+        <div class="telugu-hero-title telugu-serif">గణపతి బప్పా మోరియా</div>
+      </div>
+
+      <div class="hero-grid">
+        <div class="hero-text-col">
+          <h1 class="giant-headline">
+            <span class="headline-line">GANAPATI</span>
+            <span class="headline-line">BAPPA</span>
+            <span class="headline-line"><span class="serif-italic">Morya</span></span>
+          </h1>
+
+          <div class="telugu-sub-heading telugu-serif">
+            వినాయక నిమజ్జనం 2026
+          </div>
+
+          <p class="hero-subtext">
+            RAMPURA RAMALAYAM DOWN, SALIPETA SHUTTLE COURT, PENDURTHI — 27 SEPTEMBER 2026
+          </p>
+
+          <!-- Swiss Countdown Box -->
+          <div class="hero-countdown-box">
+            <div class="cd-label-row">COUNTDOWN TO CELEBRATIONS & ANNADHANAM</div>
+            <div class="cd-digits-grid" id="countdown-timer">
+              <div class="cd-item"><span id="cd-days">00</span><small>DAYS</small></div>
+              <div class="cd-divider">:</div>
+              <div class="cd-item"><span id="cd-hours">00</span><small>HRS</small></div>
+              <div class="cd-divider">:</div>
+              <div class="cd-item"><span id="cd-mins">00</span><small>MINS</small></div>
+              <div class="cd-divider">:</div>
+              <div class="cd-item"><span id="cd-secs">00</span><small>SECS</small></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Clean Transparent Cutout Ganesha Idol -->
+        <div class="hero-mark-col">
+          <div class="natural-idol-wrapper">
+            <img src="/our_idol_nobg.png" alt="Mourya Boys Vinayaka Idol 2026" class="natural-idol-img">
+            <div class="natural-idol-badge">
+              OUR MOURYA BOYS VINAYAKA IDOL
+            </div>
+            <div class="telugu-caption telugu-serif">॥ శ్రీ వరసిద్ధి వినాయక స్వామి ॥</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll-line"></div>
+    </section>
+
+
+    <!-- 02 — ABOUT SECTION -->
+    <section class="section-block" id="about">
+      <div class="section-header">
+        <span class="section-num-label">02 / ABOUT US</span>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-left-col">
+          <h2 class="section-headline">
+            WHO <span class="serif-italic">We</span> ARE
+          </h2>
+          <div class="telugu-section-sub telugu-serif">
+            పెందుర్తి & రాంపురం మిత్రులు • స్నేహం • భక్తి • ఐక్యత
+          </div>
+        </div>
+
+        <div class="about-right-col">
+          <p class="body-lead">
+            We are <strong>MOURYA BOYS</strong>, a batch of friends from Pendurthi & Rampuram bound by devotion, brotherhood, and a 10-year tradition. Every Sri Vinayaka Chavithi, we host Lord Ganesha at Salipeta Shuttle Court (Rampura Ramalayam Down) with open hearts, community feasts, and high-energy celebration.
+          </p>
+
+          <div class="about-team-frame">
+            <img src="/team.jpg" alt="Mourya Boys Batch Team Photo" class="swiss-img">
+            <div class="img-swiss-caption">FIG 01 — THE MOURYA BOYS BATCH (PENDURTHI & RAMPURAM)</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Giant Stat Numbers -->
+      <div class="stats-row">
+        <div class="stat-block">
+          <div class="stat-number">10+</div>
+          <div class="stat-name">YEARS OF CELEBRATION</div>
+        </div>
+
+        <div class="stat-block">
+          <div class="stat-number">30+</div>
+          <div class="stat-name">BATCH MEMBERS</div>
+        </div>
+
+        <div class="stat-block">
+          <div class="stat-number">5,000+</div>
+          <div class="stat-name">DEVOTEES SERVED</div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 03 — SCHEDULE SECTION -->
+    <section class="section-block" id="schedule">
+      <div class="section-header">
+        <span class="section-num-label">03 / EVENT SCHEDULE</span>
+      </div>
+
+      <h2 class="section-headline">
+        PROGRAMME <span class="serif-italic">Timings</span>
+      </h2>
+
+      <!-- Swiss Table Layout with Hover Invert -->
+      <div class="swiss-table">
+        
+        <div class="table-row">
+          <div class="cell-date">27.09.2026</div>
+          <div class="cell-time">12:30 PM</div>
+          <div class="cell-event">
+            <div class="event-title-text telugu-serif">అన్నసంతర్పణ (అన్నదానం)</div>
+            <div class="event-desc-text">Maha Anna Santarpana & Prasadam community meal at Salipeta Shuttle Court. Everyone is warmheartedly welcome.</div>
+          </div>
+          <div class="cell-badge">FAITH & FOOD</div>
+        </div>
+
+        <div class="table-row">
+          <div class="cell-date">27.09.2026</div>
+          <div class="cell-time">NIGHT</div>
+          <div class="cell-event">
+            <div class="event-title-text telugu-serif">వినాయక నిమజ్జనం</div>
+            <div class="event-desc-text">Grand farewell procession with dhol pathak drummers, orange gulal, and devotional celebration through Pendurthi.</div>
+          </div>
+          <div class="cell-badge">PROCESSION</div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 04 — GALLERY SECTION (HORIZONTAL CAROUSEL) -->
+    <section class="section-block gallery-section-wrapper" id="gallery">
+      <div class="section-header">
+        <span class="section-num-label">04 / GALLERY</span>
+      </div>
+
+      <h2 class="section-headline">
+        FESTIVAL <span class="serif-italic">Memories</span>
+      </h2>
+
+      <!-- Parallax Background Outlined Text -->
+      <div class="parallax-outline-text" id="parallax-text">MEMORIES</div>
+
+      <!-- Horizontal Carousel Grid -->
+      <div class="carousel-container" id="gallery-carousel">
+        
+        <!-- Lead Image: Real Idol Cutout -->
+        <div class="carousel-card">
+          <div class="card-img-box">
+            <img src="/our_idol_nobg.png" alt="Mourya Boys Vinayaka Idol" loading="lazy">
+          </div>
+          <div class="card-meta">
+            <span class="img-code">IMG 01</span>
+            <span class="img-label">OUR VINAYAKA IDOL</span>
+          </div>
+        </div>
+
+        <div class="carousel-card">
+          <div class="card-img-box">
+            <img src="/team.jpg" alt="Mourya Boys Batch Team Photo" loading="lazy">
+          </div>
+          <div class="card-meta">
+            <span class="img-code">IMG 02</span>
+            <span class="img-label">MOURYA BOYS BATCH</span>
+          </div>
+        </div>
+
+        <div class="carousel-card">
+          <div class="card-img-box">
+            <img src="/poster.jpg" alt="Official Invitation Poster" loading="lazy">
+          </div>
+          <div class="card-meta">
+            <span class="img-code">IMG 03</span>
+            <span class="img-label">INVITATION POSTER</span>
+          </div>
+        </div>
+
+        <div class="carousel-card">
+          <div class="card-img-box">
+            <img src="/annadhanam.jpg" alt="Annadhanam Feast" loading="lazy">
+          </div>
+          <div class="card-meta">
+            <span class="img-code">IMG 04</span>
+            <span class="img-label">ANNADHANAM FEAST</span>
+          </div>
+        </div>
+
+        <div class="carousel-card">
+          <div class="card-img-box">
+            <img src="/nimajjanam.jpg" alt="Nimajjanam Procession" loading="lazy">
+          </div>
+          <div class="card-meta">
+            <span class="img-code">IMG 05</span>
+            <span class="img-label">NIMAJJANAM PROCESSION</span>
+          </div>
+        </div>
+
+        <div class="carousel-card">
+          <div class="card-img-box">
+            <img src="/pandal.jpg" alt="Pandal Decorations" loading="lazy">
+          </div>
+          <div class="card-meta">
+            <span class="img-code">IMG 06</span>
+            <span class="img-label">PANDAL DECORATIONS</span>
+          </div>
+        </div>
+
+        <div class="carousel-card">
+          <div class="card-img-box">
+            <img src="/logo.jpg" alt="Mourya Boys Emblem" loading="lazy">
+          </div>
+          <div class="card-meta">
+            <span class="img-code">IMG 07</span>
+            <span class="img-label">EMBLEM LOGO</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Thin Orange Progress Bar -->
+      <div class="carousel-progress-bar">
+        <div class="progress-fill" id="gallery-progress"></div>
+      </div>
+    </section>
+
+
+    <!-- 05 — DONATIONS SECTION (SOLID ORANGE FULL-WIDTH) -->
+    <section class="donations-section-full" id="donate">
+      <div class="donations-container">
+        
+        <div class="section-header white-header">
+          <span class="section-num-label white-label">05 / DONATIONS & CONTRIBUTIONS</span>
+        </div>
+
+        <h2 class="giant-headline white-headline">
+          SUPPORT THE <span class="serif-italic-white">Celebration</span>
+        </h2>
+
+        <p class="donations-lead-text">
+          Every rupee goes directly towards pooja arrangements, decorations, Annadhanam community meals, and Nimajjanam procession.
+        </p>
+
+        <!-- 4 White Outline Cards -->
+        <div class="donate-cards-grid">
+          <div class="donate-card">
+            <div class="card-num">01</div>
+            <h3 class="card-title">Pooja & Decorations</h3>
+            <p class="card-desc">Flowers, pandal setup, lamps & ritual essentials.</p>
+          </div>
+
+          <div class="donate-card">
+            <div class="card-num">02</div>
+            <h3 class="card-title">Maha Annadhanam</h3>
+            <p class="card-desc">Community meal & prasadam distribution for 5,000+ devotees.</p>
+          </div>
+
+          <div class="donate-card">
+            <div class="card-num">03</div>
+            <h3 class="card-title">Nimajjanam Procession</h3>
+            <p class="card-desc">Dhol pathak drummers, gulal & immersion procession.</p>
+          </div>
+
+          <div class="donate-card">
+            <div class="card-num">04</div>
+            <h3 class="card-title">General Contribution</h3>
+            <p class="card-desc">Any amount to support Mourya Boys Ganesh Utsav.</p>
+          </div>
+        </div>
+
+        <!-- Amount Chips -->
+        <div class="chips-wrapper">
+          <span class="chips-title">SELECT CONTRIBUTION AMOUNT:</span>
+          <div class="chips-flex">
+            <button class="chip-btn active" data-amount="101">₹101</button>
+            <button class="chip-btn" data-amount="251">₹251</button>
+            <button class="chip-btn" data-amount="501">₹501</button>
+            <button class="chip-btn" data-amount="1001">₹1001</button>
+            <button class="chip-btn" data-amount="custom">CUSTOM</button>
+          </div>
+        </div>
+
+        <!-- Huge UPI Box -->
+        <div class="upi-hero-box">
+          <div class="upi-title-tag">OFFICIAL UPI PAYMENT NUMBER</div>
+          <div class="upi-number-display">90524 22614</div>
+          <button class="btn-copy-upi" id="copy-upi-btn">
+            <span>COPY NUMBER</span>
+          </button>
+        </div>
+
+        <!-- 3 Payment Steps -->
+        <div class="steps-row">
+          <div class="step-item">
+            <span class="step-badge">STEP 1</span>
+            <p>Pay via GPay, PhonePe, or Paytm to <strong>90524 22614</strong></p>
+          </div>
+          <div class="step-item">
+            <span class="step-badge">STEP 2</span>
+            <p>Take a screenshot of your successful transaction</p>
+          </div>
+          <div class="step-item">
+            <span class="step-badge">STEP 3</span>
+            <p>Tap below to upload screenshot to Mourya Boys WhatsApp</p>
+          </div>
+        </div>
+
+        <!-- Big Screenshot Action Button -->
+        <div class="donate-action-center">
+          <a href="https://wa.me/919052422614?text=Hi%20Mourya%20Boys%2C%20I%20have%20donated%20for%20Vinayaka%20Chavithi%202026.%20Sharing%20my%20payment%20screenshot." target="_blank" rel="noopener noreferrer" class="btn-upload-screenshot">
+            UPLOAD PAYMENT SCREENSHOT
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 06 — CONTACT SECTION -->
+    <section class="section-block" id="contact">
+      <div class="section-header">
+        <span class="section-num-label">06 / CONTACT & ORGANISERS</span>
+      </div>
+
+      <h2 class="section-headline">
+        GET IN <span class="serif-italic">Touch</span> FOR ANY QUERIES
+      </h2>
+
+      <div class="telugu-section-sub telugu-serif" style="margin-bottom: 28px;">
+        ఏవైనా సందేహాల కోసం లేదా సమాచారం కొరకు మమ్మల్ని నేరుగా సంప్రదించండి
+      </div>
+
+      <div class="contact-box">
+        <div class="contact-sub-label">DIRECT PHONE & WHATSAPP LINE</div>
+        <a href="tel:+919052422614" class="giant-phone-number">90524 22614</a>
+
+        <div class="contact-btn-row">
+          <a href="tel:+919052422614" class="btn-swiss-primary">CALL NOW</a>
+          <a href="https://wa.me/919052422614" target="_blank" rel="noopener noreferrer" class="btn-swiss-secondary">WHATSAPP</a>
+        </div>
+      </div>
+
+      <!-- Organisers Grid -->
+      <div class="organisers-list-grid">
+        <div class="org-box">
+          <span class="org-role-tag">TEAM CONTACT</span>
+          <h3 class="org-name-text">Chinnni</h3>
+          <a href="tel:8142519273" class="org-phone-link">8142519273</a>
+        </div>
+
+        <div class="org-box">
+          <span class="org-role-tag">TEAM CONTACT</span>
+          <h3 class="org-name-text">Shankar</h3>
+          <a href="tel:9966218082" class="org-phone-link">9966218082</a>
+        </div>
+
+        <div class="org-box">
+          <span class="org-role-tag">TEAM CONTACT</span>
+          <h3 class="org-name-text">Yerri Babu</h3>
+          <a href="tel:9393105071" class="org-phone-link">9393105071</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- 07 — FOOTER -->
+  <footer class="swiss-footer">
+    <div class="footer-inner">
+      <div class="footer-left-col">
+        <img src="/logo.jpg" alt="Mourya Boys Logo" class="footer-logo-img">
+        <span>MOURYA BOYS © 2026</span>
+      </div>
+      <div class="footer-right telugu-serif">
+        గణపతి బప్పా మోరియా
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Floating Circular WhatsApp Button -->
+  <a href="https://wa.me/919052422614" target="_blank" rel="noopener noreferrer" class="floating-wa-circle" aria-label="WhatsApp Us">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+    </svg>
+  </a>
+
+
+  <!-- Toast Notification Container -->
+  <div class="toast-notification" id="toast-msg"></div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
