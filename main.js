@@ -207,26 +207,6 @@ if (canvas) {
   animatePetals();
 }
 
-const petalsToggleBtn = document.getElementById('petals-toggle');
-if (petalsToggleBtn) {
-  petalsToggleBtn.addEventListener('click', () => {
-    isPetalsActive = !isPetalsActive;
-    if (isPetalsActive) {
-      petalsToggleBtn.classList.add('active-toggle');
-      petalsToggleBtn.querySelector('.petal-text').innerText = 'PETALS ON';
-      if (canvas) canvas.style.display = 'block';
-      if (animationFrameId) cancelAnimationFrame(animationFrameId);
-      animatePetals();
-    } else {
-      petalsToggleBtn.classList.remove('active-toggle');
-      petalsToggleBtn.querySelector('.petal-text').innerText = 'PETALS OFF';
-      if (animationFrameId) cancelAnimationFrame(animationFrameId);
-      if (ctx && canvas) ctx.clearRect(0, 0, canvas.width, canvas.height);
-      if (canvas) canvas.style.display = 'none';
-    }
-  });
-}
-
 
 /* ==========================================================================
    4. MOBILE FULLSCREEN MENU OVERLAY
@@ -399,11 +379,8 @@ if (flowerOfferBtn) {
     currentBlessingCount++;
     if (blessingCountEl) blessingCountEl.innerText = currentBlessingCount;
     showToast('🌺 FLOWERS OFFERED: ॥ ॐ गं गणपतये नमः ॥');
+    isPetalsActive = true;
     initPetals();
-    if (!isPetalsActive) {
-      const petalsToggle = document.getElementById('petals-toggle');
-      if (petalsToggle) petalsToggle.click();
-    }
   });
 }
 
@@ -448,11 +425,8 @@ if (poojaBtn) {
     playTempleBellSound();
 
     // 3. Trigger flower shower & Increment blessing count
+    isPetalsActive = true;
     initPetals();
-    if (!isPetalsActive) {
-      const petalsToggle = document.getElementById('petals-toggle');
-      if (petalsToggle) petalsToggle.click();
-    }
     currentBlessingCount++;
     if (blessingCountEl) blessingCountEl.innerText = currentBlessingCount;
 
