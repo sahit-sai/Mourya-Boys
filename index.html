@@ -9,14 +9,14 @@
   <meta property="og:title" content="MORYA BOYS RAMPURAM — VINAYAKA CHAVITHI 2026">
   <meta property="og:description" content="Devotional Ganesh Utsav 2026 by Morya Boys Rampuram, Pendurthi.">
   <meta property="og:image" content="/our_idol.jpg">
-  <meta name="theme-color" content="#140B06">
+  <meta name="theme-color" content="#0D0907">
 
   <link rel="icon" type="image/jpeg" href="/logo.jpg">
 
-  <!-- Google Fonts: Cinzel, Playfair Display, Poppins, Inter, Noto Serif Telugu, Noto Sans Telugu -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Sans+Telugu:wght@600;700;800&family=Noto+Serif+Telugu:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Noto+Sans+Telugu:wght@600;700;800&family=Noto+Serif+Telugu:wght@600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./style.css">
 </head>
@@ -35,12 +35,7 @@
   <header class="navbar" id="navbar">
     <div class="nav-container">
       <a href="#" class="nav-logo">
-        <!-- Line-art Gold Ganesha Logo Icon -->
-        <svg class="gold-ganesha-icon" viewBox="0 0 24 24" fill="none" stroke="#D4A437" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 2C8 2 6 4.5 6 7c0 2.5 2 4.5 4 6-2 1-3 3-3 5 0 2.5 2.5 4 5 4s5-1.5 5-4c0-2-1-4-3-5 2-1.5 4-3.5 4-6 0-2.5-2-5-6-5z"/>
-          <path d="M12 7v5"/>
-          <circle cx="12" cy="4" r="1" fill="#D4A437"/>
-        </svg>
+        <img src="/logo.jpg" alt="Morya Boys Logo" class="nav-logo-img">
         <div class="logo-text-group">
           <span class="logo-title">MORYA BOYS</span>
           <span class="logo-subtitle">RAMPURAM</span>
@@ -59,7 +54,7 @@
       </nav>
 
       <div class="nav-actions">
-        <!-- Audio & Petals Controls -->
+        <!-- Ganesh Songs & Vibe Toggle -->
         <button id="audio-toggle" class="audio-btn active-toggle" aria-label="Toggle Ganesh Songs">
           <span class="eq-bars">
             <span class="bar b1"></span>
@@ -74,7 +69,6 @@
           <span class="petal-text">PETALS ON</span>
         </button>
 
-        <!-- Right "Support Us" Saffron Button -->
         <a href="#donate" class="nav-support-btn">
           <span class="btn-icon">🧡</span> Support Us
         </a>
@@ -112,7 +106,7 @@
   </div>
 
 
-  <!-- HERO SECTION (DARK FESTIVE NIGHT HERO) -->
+  <!-- HERO SECTION (DARK ATMOSPHERIC NIGHT PANDAL) -->
   <section class="hero-section" id="hero">
     <div class="hero-bg-overlay"></div>
     <div class="hero-container">
@@ -125,37 +119,32 @@
           </div>
 
           <h1 class="hero-title-main">
-            MORYA BOYS
+            <span class="title-primary">MORYA BOYS</span>
+            <span class="title-sub">RAMPURAM</span>
           </h1>
 
-          <div class="rampuram-divider">
-            <span class="dash-line"></span>
-            <span class="sub-text">R A M P U R A M</span>
-            <span class="dash-line"></span>
-          </div>
-
           <div class="hero-pillars-row">
-            <span>Faith</span> <span class="dot">|</span>
-            <span>Unity</span> <span class="dot">|</span>
-            <span>Service</span> <span class="dot">|</span>
+            <span>Faith</span> <span class="dot">•</span>
+            <span>Unity</span> <span class="dot">•</span>
+            <span>Service</span> <span class="dot">•</span>
             <span>Celebration</span>
           </div>
 
           <p class="hero-description">
-            A group of friends coming together to celebrate Ganesh Chaturthi with devotion, seva and community spirit.
+            A group of friends coming together to celebrate Ganesh Chaturthi with devotion, seva and community spirit at Salipeta Shuttle Court, Rampuram & Pendurthi.
           </p>
 
           <!-- Hero Action Buttons -->
           <div class="hero-buttons-row">
-            <a href="#donate" class="btn-saffron-fill">
-              <span class="btn-icon">🧡</span> Make a Donation
+            <a href="#donate" class="btn-gold-primary">
+              <span class="btn-heart">🧡</span> Make a Donation
             </a>
-            <a href="#schedule" class="btn-hero-outline">
-              <span class="btn-icon">📅</span> View Events
+            <a href="#schedule" class="btn-dark-outline">
+              <span class="btn-cal">📅</span> View Events
             </a>
           </div>
 
-          <!-- Hero Countdown Card -->
+          <!-- Hero Countdown Box -->
           <div class="hero-countdown-card">
             <div class="cd-title-sm">COUNTDOWN TO ANNADHANAM & CELEBRATIONS</div>
             <div class="cd-timer-grid" id="countdown-timer">
@@ -170,7 +159,7 @@
           </div>
         </div>
 
-        <!-- Right Column: Decorated Ganesha Idol Showcase -->
+        <!-- Right Column: Majestic Seated Lord Ganesha Idol -->
         <div class="hero-idol-col">
           <div class="idol-stage-wrapper" id="idol-container">
             <div class="diya-aura-glow" id="diya-glow"></div>
@@ -220,7 +209,7 @@
     </div>
   </section>
 
-  <!-- FEATURE STRIP (OVERLAPPING BOTTOM OF HERO) -->
+  <!-- FLOATING FEATURES BAR (DARK TRANSLUCENT PILL STRIP) -->
   <div class="features-pill-section">
     <div class="features-pill-bar">
       <div class="feature-item">
@@ -251,27 +240,27 @@
         <span class="feat-icon">🌱</span>
         <div class="feat-text">
           <strong>Responsible Celebration</strong>
-          <small>Clean & Green Nimajjanam</small>
+          <small>Clean & Green Nimarjanam</small>
         </div>
       </div>
     </div>
   </div>
 
 
-  <!-- DASHBOARD GRID (CREAM BACKGROUND #FBF3E8) -->
+  <!-- LOWER CONTENT CARDS SECTION (CREAM / IVORY THEME) -->
   <div class="content-cards-wrapper">
     <div class="cards-container">
 
       <!-- ROW 1: DONATION PROGRESS & UPCOMING EVENTS -->
       <div class="cards-grid-two">
 
-        <!-- LEFT COLUMN, CARD 1: DONATION PROGRESS (WHITE CARD) -->
+        <!-- DONATION PROGRESS CARD -->
         <div class="card-white donation-progress-card" id="donate">
           <div class="card-header-row">
             <h2 class="card-heading">
               <span class="icon-orange">🧡</span> Donation Progress
             </h2>
-            <a href="#donate-flow" class="card-link-blue">View Details &rarr;</a>
+            <a href="#donate-details" class="card-link">View Details &rarr;</a>
           </div>
 
           <div class="amount-raised-display">
@@ -289,38 +278,18 @@
             Support Our Celebration &rarr;
           </button>
 
-          <!-- DONATION FLOW / UPI MODAL CONTAINER -->
-          <div class="donation-flow-box" id="donate-flow">
+          <!-- Expandable UPI Box -->
+          <div class="upi-expand-box" id="upi-box">
             <div class="upi-box-header">OFFICIAL UPI PAYMENT NUMBER</div>
             <div class="upi-big-num">90524 22614</div>
-
-            <!-- Amount Chips -->
-            <div class="chips-title-sm">SELECT CONTRIBUTION AMOUNT:</div>
-            <div class="chips-flex-row">
-              <button class="chip-btn active" data-amount="101">₹101</button>
-              <button class="chip-btn" data-amount="251">₹251</button>
-              <button class="chip-btn" data-amount="501">₹501</button>
-              <button class="chip-btn" data-amount="1001">₹1001</button>
-              <button class="chip-btn" data-amount="custom">Custom</button>
-            </div>
-
-            <!-- Steps -->
-            <div class="donation-steps-mini">
-              <div class="step-col"><strong>1. Pay via UPI</strong> <span>To 90524 22614</span></div>
-              <div class="step-col"><strong>2. Screenshot</strong> <span>Save receipt</span></div>
-              <div class="step-col"><strong>3. WhatsApp</strong> <span>Share receipt</span></div>
-            </div>
-
             <div class="upi-action-flex">
-              <button class="btn-copy-upi" id="copy-upi-btn">COPY NUMBER</button>
-              <a href="https://wa.me/919052422614?text=Hi%20Morya%20Boys%2C%20I%20have%20donated%20for%20Vinayaka%20Chavithi%202026.%20Sharing%20my%20payment%20screenshot." target="_blank" rel="noopener noreferrer" class="btn-upload-screenshot">
-                UPLOAD PAYMENT SCREENSHOT
-              </a>
+              <button class="btn-copy-upi" id="copy-upi-btn">COPY UPI NUMBER</button>
+              <a href="https://wa.me/919052422614?text=Hi%20Morya%20Boys%2C%20I%20have%20donated%20for%20Ganesh%20Chavithi%202026.%20Sharing%20my%20screenshot." target="_blank" rel="noopener noreferrer" class="btn-upload-wa">UPLOAD SCREENSHOT</a>
             </div>
           </div>
         </div>
 
-        <!-- RIGHT COLUMN, CARD 2: UPCOMING EVENTS (DARK MAROON CARD #5C0F0F) -->
+        <!-- UPCOMING EVENTS CARD (DARK MAROON CONTAINER) -->
         <div class="card-maroon events-maroon-card" id="schedule">
           <div class="maroon-header-row">
             <h2 class="maroon-heading">
@@ -329,60 +298,57 @@
             <a href="#schedule" class="maroon-link">View All &rarr;</a>
           </div>
 
-          <div class="events-card-grid">
-
-            <!-- Event Item 1 -->
-            <div class="event-white-item">
-              <div class="event-date-badge">
-                <span class="num">26</span>
-                <span class="month">SEP</span>
-                <span class="day">SAT</span>
-              </div>
-              <div class="event-info">
-                <h3 class="event-name-telugu telugu-serif">దీపారాధన</h3>
-                <div class="event-name-eng">Dheeparadhana</div>
-                <div class="event-time">🕒 6:00 PM onwards</div>
-              </div>
-              <div class="event-thumb">
-                <img src="/pandal.jpg" alt="Dheeparadhana">
-              </div>
+          <!-- Event Item 1 -->
+          <div class="event-white-item">
+            <div class="event-date-badge">
+              <span class="num">26</span>
+              <span class="month">SEP</span>
+              <span class="day">SAT</span>
             </div>
-
-            <!-- Event Item 2 -->
-            <div class="event-white-item">
-              <div class="event-date-badge">
-                <span class="num">27</span>
-                <span class="month">SEP</span>
-                <span class="day">SUN</span>
-              </div>
-              <div class="event-info">
-                <h3 class="event-name-telugu telugu-serif">అన్నసమారాధన</h3>
-                <div class="event-name-eng">Annadhanam</div>
-                <div class="event-time">🕒 12:00 PM onwards</div>
-              </div>
-              <div class="event-thumb">
-                <img src="/annadhanam.jpg" alt="Annadhanam">
-              </div>
+            <div class="event-info">
+              <h3 class="event-name-telugu telugu-serif">దీపారాధన</h3>
+              <div class="event-name-eng">Dheeparadhana</div>
+              <div class="event-time">🕒 6:00 PM onwards</div>
             </div>
-
-            <!-- Event Item 3 -->
-            <div class="event-white-item">
-              <div class="event-date-badge">
-                <span class="num">27</span>
-                <span class="month">SEP</span>
-                <span class="day">SUN</span>
-              </div>
-              <div class="event-info">
-                <h3 class="event-name-telugu telugu-serif">నిమజ్జనం</h3>
-                <div class="event-name-eng">Nimajjanam</div>
-                <div class="event-time">🕒 Evening</div>
-              </div>
-              <div class="event-thumb">
-                <img src="/nimajjanam.jpg" alt="Nimajjanam">
-              </div>
+            <div class="event-thumb">
+              <img src="/pandal.jpg" alt="Dheeparadhana">
             </div>
-
           </div>
+
+          <!-- Event Item 2 -->
+          <div class="event-white-item">
+            <div class="event-date-badge">
+              <span class="num">27</span>
+              <span class="month">SEP</span>
+              <span class="day">SUN</span>
+            </div>
+            <div class="event-info">
+              <h3 class="event-name-telugu telugu-serif">అన్నసమారాధన</h3>
+              <div class="event-name-eng">Annadhanam Prasadam</div>
+              <div class="event-time">🕒 12:00 PM onwards</div>
+            </div>
+            <div class="event-thumb">
+              <img src="/annadhanam.jpg" alt="Annadhanama">
+            </div>
+          </div>
+
+          <!-- Event Item 3 -->
+          <div class="event-white-item">
+            <div class="event-date-badge">
+              <span class="num">27</span>
+              <span class="month">SEP</span>
+              <span class="day">SUN</span>
+            </div>
+            <div class="event-info">
+              <h3 class="event-name-telugu telugu-serif">నిమజ్జనం</h3>
+              <div class="event-name-eng">Nimarjanam Procession</div>
+              <div class="event-time">🕒 Evening</div>
+            </div>
+            <div class="event-thumb">
+              <img src="/nimajjanam.jpg" alt="Nimarjanam">
+            </div>
+          </div>
+
         </div>
 
       </div>
@@ -391,13 +357,13 @@
       <!-- ROW 2: LATEST UPDATES & GALLERY -->
       <div class="cards-grid-two">
 
-        <!-- LEFT COLUMN, CARD 3: LATEST UPDATES (WHITE CARD) -->
+        <!-- LATEST UPDATES CARD -->
         <div class="card-white updates-card" id="updates">
           <div class="card-header-row">
             <h2 class="card-heading">
               <span class="icon-orange">📣</span> Latest Updates
             </h2>
-            <a href="#updates" class="card-link-blue">View All &gt;</a>
+            <a href="#updates" class="card-link">View All &rarr;</a>
           </div>
 
           <div class="updates-list">
@@ -408,7 +374,7 @@
               <div class="update-details">
                 <h3 class="update-title">Mandapam Setup Completed ✨</h3>
                 <div class="update-date">24 Sep 2026</div>
-                <p class="update-excerpt">Our Ganesh Mandapam is ready. Join us for dheeparadhana on 26th September.</p>
+                <p class="update-excerpt">Our Ganesh Mandapam is ready at Salipeta Shuttle Court, Rampura Ramalayam Down. Join us for dheeparadhana on 26th September.</p>
               </div>
             </div>
 
@@ -417,32 +383,32 @@
                 <img src="/annadhanam.jpg" alt="Annadhanam Prep">
               </div>
               <div class="update-details">
-                <h3 class="update-title">Annadhanam Preparation in Progress</h3>
+                <h3 class="update-title">Annadhanam Preparation in Progress 🍲</h3>
                 <div class="update-date">25 Sep 2026</div>
-                <p class="update-excerpt">Serving food to everyone with love. All are welcome!</p>
+                <p class="update-excerpt">Serving food to everyone with love and devotion. Maha Prasadam meals starting at 12:30 PM. All are welcome!</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- RIGHT COLUMN, CARD 4: GALLERY (WHITE CARD) -->
+        <!-- GALLERY CARD -->
         <div class="card-white gallery-card-block" id="gallery">
           <div class="card-header-row">
             <h2 class="card-heading">
               <span class="icon-orange">🖼️</span> Gallery
             </h2>
-            <a href="#gallery" class="card-link-blue">View Gallery &gt;</a>
+            <a href="#gallery" class="card-link">View Gallery &rarr;</a>
           </div>
 
           <div class="gallery-thumbs-grid">
             <div class="gal-thumb-item">
-              <img src="/our_idol.jpg" alt="Morya Boys Idol with Crowd">
+              <img src="/our_idol.jpg" alt="Morya Boys Idol">
             </div>
             <div class="gal-thumb-item">
-              <img src="/nimajjanam.jpg" alt="Dhol Drummers & Procession">
+              <img src="/nimajjanam.jpg" alt="Procession">
             </div>
             <div class="gal-thumb-item">
-              <img src="/team.jpg" alt="Colourful Procession with Gulal">
+              <img src="/team.jpg" alt="Morya Boys Team">
             </div>
           </div>
         </div>
@@ -484,10 +450,10 @@
 
         <div class="contact-hero-banner">
           <div class="contact-line-label">DIRECT PHONE & WHATSAPP LINE</div>
-          <a href="tel:+919052422614" class="contact-big-phone">+91 90524 22614</a>
+          <a href="tel:+919052422614" class="contact-big-phone">90524 22614</a>
           <div class="contact-btn-flex">
-            <a href="tel:+919052422614" class="btn-call-now">Call</a>
-            <a href="https://wa.me/919052422614" target="_blank" rel="noopener noreferrer" class="btn-wa-now">WhatsApp</a>
+            <a href="tel:+919052422614" class="btn-call-now">CALL NOW</a>
+            <a href="https://wa.me/919052422614" target="_blank" rel="noopener noreferrer" class="btn-wa-now">WHATSAPP</a>
           </div>
         </div>
 
@@ -517,7 +483,7 @@
   </div>
 
 
-  <!-- SITE FOOTER -->
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-container">
       <div class="footer-logo-row">
@@ -531,8 +497,8 @@
   </footer>
 
 
-  <!-- FIXED MOBILE BOTTOM TAB BAR (WITH RAISED SAFFRON HEART BUTTON) -->
-  <nav class="mobile-bottom-nav">
+  <!-- FLOATING MOBILE BOTTOM NAVIGATION BAR -->
+  <div class="mobile-bottom-nav">
     <a href="#hero" class="mob-nav-item active">
       <span class="mob-icon">🏠</span>
       <span class="mob-label">Home</span>
@@ -552,7 +518,7 @@
       <span class="mob-icon">📣</span>
       <span class="mob-label">Updates</span>
     </a>
-  </nav>
+  </div>
 
 
   <!-- Toast Notification -->
