@@ -1,29 +1,23 @@
 /* ==========================================================================
-   MORYA BOYS RAMPURAM — ULTRA PREMIUM DEVOTIONAL FESTIVAL UI DESIGN
+   MORYA BOYS RAMPURAM — EXACT COLOR PALETTE & DESIGN SYSTEM
    ========================================================================== */
 
 :root {
-  --bg-dark: #0D0907;
-  --bg-dark-card: #160F0C;
-  --bg-cream: #F9F6F0;
+  --hero-bg: #140B06;
+  --maroon-primary: #7A1414;
+  --maroon-dark: #5C0F0F;
+  --saffron-primary: #F7A928;
+  --orange-accent: #F28C28;
+  --gold-primary: #D4A437;
+  --cream-bg: #FBF3E8;
   --white: #FFFFFF;
-
-  --gold-primary: #F59E0B;
-  --gold-hover: #EAB308;
-  --gold-light: #FDE68A;
-  --gold-tint: rgba(245, 158, 11, 0.12);
-
-  --maroon-dark: #58130D;
-  --maroon-primary: #6B1710;
-  --maroon-hover: #801B13;
-
-  --text-dark: #1F1916;
-  --text-muted: #665A54;
-  --text-gold: #F59E0B;
+  --text-light: #FFFFFF;
+  --text-dark: #2A1A12;
+  --text-muted: #665247;
 
   --font-display: 'Cinzel', 'Playfair Display', Georgia, serif;
   --font-serif: 'Playfair Display', Georgia, serif;
-  --font-sans: 'Instrument Sans', -apple-system, sans-serif;
+  --font-sans: 'Poppins', 'Inter', -apple-system, sans-serif;
   --font-telugu-serif: 'Noto Serif Telugu', Georgia, serif;
   --font-telugu-sans: 'Noto Sans Telugu', sans-serif;
 }
@@ -38,7 +32,7 @@
 html {
   scroll-behavior: smooth;
   font-family: var(--font-sans);
-  background-color: var(--bg-dark);
+  background-color: var(--hero-bg);
   color: var(--text-dark);
   overflow-x: hidden;
   width: 100%;
@@ -49,7 +43,7 @@ body {
   width: 100%;
   max-width: 100vw;
   overflow-x: hidden;
-  background-color: var(--bg-dark);
+  background-color: var(--hero-bg);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
@@ -65,7 +59,7 @@ body {
   z-index: 40;
 }
 
-/* Telugu Typography Helpers */
+/* Telugu Classes */
 .telugu-serif {
   font-family: var(--font-telugu-serif);
   font-weight: 700;
@@ -77,7 +71,7 @@ body {
 
 
 /* ==========================================================================
-   1. FIXED NAVBAR (DARK TRANSLUCENT WITH GOLD ACCENTS)
+   1. FIXED NAVBAR (DESKTOP)
    ========================================================================== */
 
 .navbar {
@@ -86,17 +80,11 @@ body {
   left: 0;
   width: 100%;
   z-index: 50;
-  background: rgba(13, 9, 7, 0.92);
+  background: rgba(20, 11, 6, 0.94);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  padding: 12px 20px;
-  border-bottom: 1px solid rgba(245, 158, 11, 0.2);
-}
-
-@media (min-width: 768px) {
-  .navbar {
-    padding: 14px 40px;
-  }
+  padding: 14px 24px;
+  border-bottom: 1px solid rgba(212, 164, 55, 0.2);
 }
 
 .nav-container {
@@ -110,46 +98,42 @@ body {
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   text-decoration: none;
-  color: var(--white);
 }
 
-.nav-logo-img {
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid var(--gold-primary);
-  box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
+.gold-ganesha-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
 }
 
 .logo-text-group {
   display: flex;
   flex-direction: column;
+  line-height: 1.1;
 }
 
 .logo-title {
   font-family: var(--font-display);
   font-size: 16px;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   color: var(--white);
-  line-height: 1.1;
 }
 
 .logo-subtitle {
   font-family: var(--font-sans);
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 700;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.22em;
   color: var(--gold-primary);
 }
 
 .nav-links {
   display: none;
   align-items: center;
-  gap: 24px;
+  gap: 26px;
 }
 
 @media (min-width: 920px) {
@@ -160,9 +144,9 @@ body {
 
 .nav-link {
   font-family: var(--font-sans);
-  font-size: 13px;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--white);
   text-decoration: none;
   position: relative;
   padding: 4px 0;
@@ -191,7 +175,7 @@ body {
 
 .audio-btn {
   background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(245, 158, 11, 0.4);
+  border: 1px solid rgba(212, 164, 55, 0.4);
   color: var(--gold-primary);
   padding: 6px 12px;
   font-family: var(--font-sans);
@@ -206,9 +190,9 @@ body {
 }
 
 .audio-btn:hover, .audio-btn.active-toggle {
-  background: var(--gold-primary);
-  color: var(--bg-dark);
-  border-color: var(--gold-primary);
+  background: var(--saffron-primary);
+  color: var(--hero-bg);
+  border-color: var(--saffron-primary);
 }
 
 .eq-bars {
@@ -237,21 +221,19 @@ body {
   font-family: var(--font-sans);
   font-size: 13px;
   font-weight: 700;
-  background-color: var(--gold-primary);
-  color: var(--bg-dark);
+  background-color: var(--saffron-primary);
+  color: var(--hero-bg);
   text-decoration: none;
   padding: 8px 18px;
-  border-radius: 20px;
+  border-radius: 8px;
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 
 .nav-support-btn:hover {
-  background-color: var(--gold-hover);
-  transform: translateY(-1px);
+  background-color: #E59A1D;
 }
 
 /* Mobile Hamburger */
@@ -276,15 +258,15 @@ body {
 .menu-bar {
   width: 100%;
   height: 2.5px;
-  background-color: var(--gold-primary);
+  background-color: var(--saffron-primary);
   border-radius: 2px;
 }
 
-/* Fullscreen Mobile Menu Overlay */
+/* Mobile Menu Overlay */
 .mobile-menu-overlay {
   position: fixed;
   inset: 0;
-  background-color: var(--bg-dark);
+  background-color: var(--hero-bg);
   z-index: 100;
   display: flex;
   align-items: center;
@@ -305,7 +287,7 @@ body {
   right: 24px;
   background: none;
   border: none;
-  color: var(--gold-primary);
+  color: var(--saffron-primary);
   font-size: 3rem;
   cursor: pointer;
 }
@@ -325,14 +307,14 @@ body {
   text-decoration: none;
 }
 .mobile-link:hover {
-  color: var(--gold-primary);
+  color: var(--saffron-primary);
 }
 
 
 /* Sacred Mantra Ticker Bar */
 .sacred-mantra-bar {
   margin-top: 64px;
-  background: linear-gradient(90deg, #1E120B 0%, #2A1A10 50%, #1E120B 100%);
+  background: linear-gradient(90deg, #1C0F08 0%, #2A170B 50%, #1C0F08 100%);
   color: var(--gold-primary);
   height: 38px;
   display: flex;
@@ -340,7 +322,7 @@ body {
   overflow: hidden;
   position: relative;
   z-index: 45;
-  border-bottom: 1px solid rgba(245, 158, 11, 0.3);
+  border-bottom: 1px solid rgba(212, 164, 55, 0.25);
 }
 
 .mantra-track {
@@ -363,13 +345,13 @@ body {
 
 
 /* ==========================================================================
-   2. HERO SECTION (ATMOSPHERIC DARK NIGHT PANDAL)
+   2. HERO SECTION (#140B06 DEEP NIGHT HERO)
    ========================================================================== */
 
 .hero-section {
   position: relative;
   padding: 50px 20px 80px 20px;
-  background: radial-gradient(circle at 70% 30%, #26170E 0%, #0D0907 70%);
+  background: radial-gradient(circle at 75% 30%, #2E180D 0%, #140B06 70%);
   color: var(--white);
   overflow: hidden;
   min-height: 85vh;
@@ -407,48 +389,55 @@ body {
 .telugu-blessing-tag {
   font-size: clamp(16px, 2.5vw, 22px);
   color: var(--gold-primary);
-  margin-bottom: 8px;
-  text-shadow: 0 0 12px rgba(245, 158, 11, 0.5);
+  margin-bottom: 6px;
 }
 
 .hero-title-main {
-  display: flex;
-  flex-direction: column;
-  line-height: 0.95;
-  margin-bottom: 16px;
-}
-
-.title-primary {
   font-family: var(--font-display);
-  font-size: clamp(46px, 7.5vw, 84px);
+  font-size: clamp(48px, 8vw, 88px);
   font-weight: 900;
   letter-spacing: -0.02em;
   color: var(--white);
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  line-height: 0.95;
+
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
-.title-sub {
+/* —— R A M P U R A M —— Subname */
+.rampuram-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0 16px 0;
+}
+
+.rampuram-divider .dash-line {
+  height: 1px;
+  width: 40px;
+  background-color: rgba(212, 164, 55, 0.6);
+}
+
+.rampuram-divider .sub-text {
   font-family: var(--font-sans);
-  font-size: clamp(18px, 3.5vw, 36px);
-  font-weight: 800;
+  font-size: 13px;
+  font-weight: 700;
   letter-spacing: 0.35em;
   color: var(--gold-primary);
-  margin-top: 4px;
 }
 
 .hero-pillars-row {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   font-family: var(--font-sans);
   font-size: 14px;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.85);
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .hero-pillars-row .dot {
-  color: var(--gold-primary);
+  color: var(--saffron-primary);
 }
 
 .hero-description {
@@ -457,7 +446,7 @@ body {
   color: rgba(255, 255, 255, 0.75);
   max-width: 540px;
   line-height: 1.6;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .hero-buttons-row {
@@ -468,34 +457,33 @@ body {
   margin-bottom: 36px;
 }
 
-.btn-gold-primary {
+.btn-saffron-fill {
   font-family: var(--font-sans);
   font-size: 15px;
   font-weight: 700;
-  background-color: var(--gold-primary);
-  color: var(--bg-dark);
+  background-color: var(--saffron-primary);
+  color: var(--hero-bg);
   text-decoration: none;
   padding: 14px 28px;
   border-radius: 30px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+  box-shadow: 0 6px 20px rgba(247, 169, 40, 0.35);
   transition: all 0.25s ease;
 }
 
-.btn-gold-primary:hover {
-  background-color: var(--gold-hover);
+.btn-saffron-fill:hover {
+  background-color: #E59A1D;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.5);
 }
 
-.btn-dark-outline {
+.btn-hero-outline {
   font-family: var(--font-sans);
   font-size: 15px;
   font-weight: 700;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+  border: 1.5px solid var(--white);
   color: var(--white);
   text-decoration: none;
   padding: 14px 28px;
@@ -506,20 +494,19 @@ body {
   transition: all 0.25s ease;
 }
 
-.btn-dark-outline:hover {
-  border-color: var(--gold-primary);
-  color: var(--gold-primary);
-  background: rgba(245, 158, 11, 0.1);
+.btn-hero-outline:hover {
+  border-color: var(--saffron-primary);
+  color: var(--saffron-primary);
+  background: rgba(247, 169, 40, 0.1);
 }
 
 /* Hero Countdown Card */
 .hero-countdown-card {
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(245, 158, 11, 0.3);
+  border: 1px solid rgba(212, 164, 55, 0.3);
   padding: 16px 20px;
   border-radius: 12px;
   max-width: 480px;
-  backdrop-filter: blur(8px);
 }
 
 .cd-title-sm {
@@ -566,7 +553,7 @@ body {
 }
 
 
-/* Hero Idol Showcase Column */
+/* Hero Idol Column */
 .hero-idol-col {
   display: flex;
   flex-direction: column;
@@ -588,7 +575,7 @@ body {
   max-width: 420px;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 20px rgba(245, 158, 11, 0.3));
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 20px rgba(247, 169, 40, 0.3));
   transition: transform 0.4s ease;
   animation: floatIdol 4s ease-in-out infinite alternate;
   position: relative;
@@ -603,15 +590,16 @@ body {
 .flag-decor {
   position: absolute;
   top: 15%;
-  background: var(--gold-primary);
-  color: var(--bg-dark);
+  background: var(--maroon-primary);
+  color: var(--gold-primary);
   padding: 6px 14px;
   font-family: var(--font-display);
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.1em;
   z-index: 3;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--gold-primary);
 }
 
 .left-flag { left: -10px; transform: rotate(-8deg); }
@@ -624,7 +612,7 @@ body {
   letter-spacing: 0.15em;
   color: var(--gold-primary);
   margin-top: 14px;
-  background: rgba(245, 158, 11, 0.12);
+  background: rgba(212, 164, 55, 0.12);
   border: 1px solid var(--gold-primary);
   padding: 6px 14px;
   border-radius: 20px;
@@ -650,7 +638,7 @@ body {
   width: 380px;
   height: 380px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(245, 158, 11, 0.85) 0%, rgba(255, 140, 0, 0.4) 50%, transparent 75%);
+  background: radial-gradient(circle, rgba(247, 169, 40, 0.85) 0%, rgba(212, 164, 55, 0.4) 50%, transparent 75%);
   z-index: 1;
   pointer-events: none;
   opacity: 0;
@@ -677,7 +665,7 @@ body {
   width: 100%;
   max-width: 440px;
   margin-top: 18px;
-  border: 1px solid rgba(245, 158, 11, 0.3);
+  border: 1px solid rgba(212, 164, 55, 0.3);
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(8px);
   padding: 16px;
@@ -707,7 +695,7 @@ body {
   font-weight: 700;
   background: rgba(255, 255, 255, 0.08);
   color: var(--white);
-  border: 1px solid rgba(245, 158, 11, 0.4);
+  border: 1px solid rgba(212, 164, 55, 0.4);
   padding: 8px 14px;
   cursor: pointer;
   display: inline-flex;
@@ -718,15 +706,15 @@ body {
 }
 
 .puja-action-btn:hover, .puja-action-btn.active {
-  background-color: var(--gold-primary);
-  color: var(--bg-dark);
-  border-color: var(--gold-primary);
+  background-color: var(--saffron-primary);
+  color: var(--hero-bg);
+  border-color: var(--saffron-primary);
 }
 
 .blessing-counter-bar {
   margin-top: 14px;
   padding-top: 10px;
-  border-top: 1px dashed rgba(245, 158, 11, 0.3);
+  border-top: 1px dashed rgba(212, 164, 55, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -740,7 +728,7 @@ body {
   font-size: 16px;
   font-weight: 800;
   color: var(--gold-primary);
-  background: rgba(245, 158, 11, 0.15);
+  background: rgba(212, 164, 55, 0.15);
   border: 1px solid var(--gold-primary);
   padding: 2px 8px;
   border-radius: 6px;
@@ -748,7 +736,7 @@ body {
 
 
 /* ==========================================================================
-   3. FLOATING FEATURES PILL BAR (DARK TRANSLUCENT STRIP)
+   3. FEATURE STRIP (#1A100A DARK STRIP OVERLAPPING BOTTOM OF HERO)
    ========================================================================== */
 
 .features-pill-section {
@@ -759,15 +747,14 @@ body {
 }
 
 .features-pill-bar {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
-  background: rgba(20, 14, 10, 0.92);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(245, 158, 11, 0.3);
+  background-color: #1A100A;
+  border: 1px solid rgba(212, 164, 55, 0.3);
   border-radius: 16px;
   padding: 20px 24px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 20px;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
 }
@@ -779,15 +766,15 @@ body {
 }
 
 .feat-icon {
-  font-size: 24px;
-  background: rgba(245, 158, 11, 0.15);
+  font-size: 22px;
+  background: rgba(247, 169, 40, 0.12);
   width: 44px;
   height: 44px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(245, 158, 11, 0.3);
+  border: 1px solid rgba(247, 169, 40, 0.3);
   flex-shrink: 0;
 }
 
@@ -805,17 +792,17 @@ body {
 
 .feat-text small {
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.65);
   margin-top: 2px;
 }
 
 
 /* ==========================================================================
-   4. CONTENT CARDS SECTION (CREAM / IVORY THEME)
+   4. DASHBOARD GRID (CREAM BACKGROUND #FBF3E8)
    ========================================================================== */
 
 .content-cards-wrapper {
-  background-color: var(--bg-cream);
+  background-color: var(--cream-bg);
   padding: 60px 20px 100px 20px;
   position: relative;
   z-index: 10;
@@ -845,13 +832,13 @@ body {
   }
 }
 
-/* Base White Card Box */
+/* Base White Card (#FFFFFF with 16px radius and soft shadow) */
 .card-white {
   background-color: var(--white);
   border-radius: 16px;
   padding: 28px;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(42, 26, 18, 0.08);
+  box-shadow: 0 4px 20px rgba(42, 26, 18, 0.06);
 }
 
 .card-header-row {
@@ -864,21 +851,25 @@ body {
 .card-heading {
   font-family: var(--font-sans);
   font-size: 18px;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--text-dark);
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.card-link {
+.icon-orange {
+  color: var(--orange-accent);
+}
+
+.card-link-blue {
   font-family: var(--font-sans);
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 600;
   color: #2563EB;
   text-decoration: none;
 }
-.card-link:hover {
+.card-link-blue:hover {
   text-decoration: underline;
 }
 
@@ -899,7 +890,7 @@ body {
 .current-amount {
   font-family: var(--font-sans);
   font-size: clamp(32px, 4vw, 42px);
-  font-weight: 900;
+  font-weight: 800;
   color: var(--text-dark);
 }
 
@@ -911,7 +902,7 @@ body {
 
 .donation-progress-track {
   height: 12px;
-  background-color: #E2E8F0;
+  background-color: #EFE6DA;
   border-radius: 10px;
   position: relative;
   overflow: hidden;
@@ -920,7 +911,7 @@ body {
 
 .progress-bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, #F59E0B 0%, #D97706 100%);
+  background-color: var(--saffron-primary);
   border-radius: 10px;
   transition: width 1s ease;
 }
@@ -947,20 +938,20 @@ body {
   cursor: pointer;
   transition: background-color 0.2s ease;
   text-align: center;
-  box-shadow: 0 4px 14px rgba(107, 23, 16, 0.3);
+  box-shadow: 0 4px 14px rgba(122, 20, 20, 0.3);
 }
 
 .btn-maroon-full:hover {
-  background-color: var(--maroon-hover);
+  background-color: #631010;
 }
 
-/* Expandable UPI Box */
-.upi-expand-box {
+/* Expandable UPI & Donation Flow Box */
+.donation-flow-box {
   margin-top: 16px;
-  background-color: #FFFBF5;
-  border: 1.5px dashed var(--gold-primary);
+  background-color: #FFFDF9;
+  border: 1.5px dashed var(--saffron-primary);
   border-radius: 12px;
-  padding: 16px;
+  padding: 18px;
   text-align: center;
 }
 
@@ -976,7 +967,59 @@ body {
   font-size: 26px;
   font-weight: 800;
   color: var(--text-dark);
-  margin: 6px 0 12px 0;
+  margin: 6px 0 14px 0;
+}
+
+.chips-title-sm {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.chips-flex-row {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.chip-btn {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+  background: var(--white);
+  border: 1px solid var(--maroon-primary);
+  color: var(--maroon-primary);
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.chip-btn:hover, .chip-btn.active {
+  background-color: var(--maroon-primary);
+  color: var(--white);
+}
+
+.donation-steps-mini {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  font-size: 10px;
+  margin-bottom: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #F0E6D8;
+}
+
+.step-col {
+  display: flex;
+  flex-direction: column;
+  color: var(--text-muted);
+}
+.step-col strong {
+  color: var(--text-dark);
 }
 
 .upi-action-flex {
@@ -993,30 +1036,30 @@ body {
   background-color: var(--maroon-primary);
   color: var(--white);
   border: none;
-  padding: 8px 16px;
+  padding: 9px 18px;
   border-radius: 6px;
   cursor: pointer;
 }
 
-.btn-upload-wa {
+.btn-upload-screenshot {
   font-family: var(--font-sans);
   font-size: 12px;
   font-weight: 700;
   background-color: #25D366;
   color: var(--white);
   text-decoration: none;
-  padding: 8px 16px;
+  padding: 9px 18px;
   border-radius: 6px;
 }
 
 
-/* Upcoming Events Card (Dark Maroon Container) */
+/* Upcoming Events Card (Dark Maroon Container #5C0F0F) */
 .card-maroon {
   background-color: var(--maroon-dark);
   border-radius: 16px;
   padding: 28px;
   color: var(--white);
-  box-shadow: 0 8px 30px rgba(88, 19, 13, 0.4);
+  box-shadow: 0 8px 30px rgba(92, 15, 15, 0.4);
 }
 
 .maroon-header-row {
@@ -1029,7 +1072,7 @@ body {
 .maroon-heading {
   font-family: var(--font-sans);
   font-size: 18px;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--white);
   display: flex;
   align-items: center;
@@ -1039,9 +1082,15 @@ body {
 .maroon-link {
   font-family: var(--font-sans);
   font-size: 13px;
-  font-weight: 700;
-  color: var(--gold-light);
+  font-weight: 600;
+  color: var(--saffron-primary);
   text-decoration: none;
+}
+
+.events-card-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .event-white-item {
@@ -1052,20 +1101,17 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 14px;
-  margin-bottom: 12px;
   color: var(--text-dark);
   transition: transform 0.2s ease;
 }
-.event-white-item:last-child {
-  margin-bottom: 0;
-}
+
 .event-white-item:hover {
   transform: translateX(4px);
 }
 
 .event-date-badge {
   background-color: #FEE2E2;
-  color: #991B1B;
+  color: var(--maroon-primary);
   border-radius: 8px;
   padding: 8px 12px;
   display: flex;
@@ -1076,6 +1122,7 @@ body {
 }
 
 .event-date-badge .num {
+  font-family: var(--font-display);
   font-size: 20px;
   font-weight: 800;
 }
@@ -1112,8 +1159,8 @@ body {
 }
 
 .event-thumb {
-  width: 50px;
-  height: 50px;
+  width: 54px;
+  height: 54px;
   border-radius: 8px;
   overflow: hidden;
   flex-shrink: 0;
@@ -1137,7 +1184,7 @@ body {
   gap: 16px;
   align-items: flex-start;
   padding-bottom: 16px;
-  border-bottom: 1px solid #E2E8F0;
+  border-bottom: 1px solid #EFE6DA;
 }
 .update-list-item:last-child {
   border-bottom: none;
@@ -1145,8 +1192,8 @@ body {
 }
 
 .update-thumb {
-  width: 70px;
-  height: 60px;
+  width: 75px;
+  height: 64px;
   border-radius: 8px;
   overflow: hidden;
   flex-shrink: 0;
@@ -1165,7 +1212,7 @@ body {
   font-size: 15px;
   font-weight: 700;
   color: var(--text-dark);
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 .update-date {
@@ -1176,7 +1223,7 @@ body {
 
 .update-excerpt {
   font-size: 12px;
-  color: #475569;
+  color: #52443C;
   line-height: 1.4;
 }
 
@@ -1201,7 +1248,7 @@ body {
   transition: transform 0.3s ease;
 }
 .gal-thumb-item:hover img {
-  transform: scale(1.05);
+  transform: scale(1.06);
 }
 
 
@@ -1253,15 +1300,15 @@ body {
 
 .story-body {
   font-size: 15px;
-  color: #475569;
+  color: var(--text-muted);
   line-height: 1.6;
 }
 
 .team-photo-frame {
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  border: 2px solid var(--gold-primary);
+  box-shadow: 0 8px 24px rgba(42, 26, 18, 0.1);
+  border: 2px solid var(--saffron-primary);
 }
 
 .team-photo-frame img {
@@ -1272,7 +1319,7 @@ body {
 
 .team-caption {
   background-color: var(--maroon-dark);
-  color: var(--gold-light);
+  color: var(--saffron-primary);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -1322,7 +1369,7 @@ body {
 .contact-big-phone {
   font-family: var(--font-sans);
   font-size: clamp(32px, 6vw, 54px);
-  font-weight: 900;
+  font-weight: 800;
   color: var(--maroon-primary);
   text-decoration: none;
   display: block;
@@ -1365,10 +1412,10 @@ body {
 }
 
 .org-card-item {
-  border: 1.5px solid #E2E8F0;
+  border: 1.5px solid #EFE6DA;
   border-radius: 10px;
   padding: 16px;
-  background-color: #FFFBF5;
+  background-color: #FFFDF9;
 }
 
 .org-tag {
@@ -1395,10 +1442,10 @@ body {
 
 /* Site Footer */
 .site-footer {
-  background-color: var(--bg-dark);
+  background-color: var(--hero-bg);
   color: var(--white);
   padding: 30px 20px 90px 20px;
-  border-top: 2px solid var(--gold-primary);
+  border-top: 2px solid var(--saffron-primary);
 }
 
 @media (min-width: 768px) {
@@ -1440,7 +1487,7 @@ body {
 
 
 /* ==========================================================================
-   5. FLOATING MOBILE BOTTOM NAVIGATION BAR
+   5. FIXED MOBILE BOTTOM TAB BAR (WHITE BAR WITH RAISED SAFFRON BUTTON)
    ========================================================================== */
 
 .mobile-bottom-nav {
@@ -1449,10 +1496,10 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 60px;
-  background: rgba(13, 9, 7, 0.96);
-  backdrop-filter: blur(12px);
-  border-top: 1px solid rgba(245, 158, 11, 0.25);
+  height: 62px;
+  background: var(--white);
+  border-top: 1px solid #EFE6DA;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.08);
   z-index: 1000;
   align-items: center;
   justify-content: space-around;
@@ -1469,12 +1516,12 @@ body {
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--text-muted);
   font-size: 10px;
   font-weight: 600;
 }
 .mob-nav-item.active, .mob-nav-item:hover {
-  color: var(--gold-primary);
+  color: var(--orange-accent);
 }
 
 .mob-icon {
@@ -1482,17 +1529,17 @@ body {
 }
 
 .mob-donate-circle {
-  width: 46px;
-  height: 46px;
-  background-color: var(--gold-primary);
+  width: 48px;
+  height: 48px;
+  background-color: var(--saffron-primary);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.5);
-  margin-top: -20px;
+  box-shadow: 0 4px 14px rgba(247, 169, 40, 0.5);
+  margin-top: -22px;
   text-decoration: none;
-  border: 2.5px solid var(--bg-dark);
+  border: 3px solid var(--white);
 }
 
 .mob-donate-icon {
@@ -1506,8 +1553,8 @@ body {
   bottom: 74px;
   left: 50%;
   transform: translateX(-50%) translateY(100px);
-  background-color: var(--gold-primary);
-  color: var(--bg-dark);
+  background-color: var(--saffron-primary);
+  color: var(--hero-bg);
   padding: 12px 24px;
   font-family: var(--font-sans);
   font-size: 13px;
