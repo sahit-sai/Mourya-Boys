@@ -415,3 +415,11 @@ if (templeBellBtn) {
     showToast('🔔 TEMPLE BELL RANG! ॥ శ్రీ వరసిద్ధి వినాయక స్వామి ॥');
   });
 }
+
+const openUpiBtn = document.getElementById('open-upi-btn');
+const upiBox = document.getElementById('upi-box');
+if (openUpiBtn && upiBox) {
+  openUpiBtn.addEventListener('click', () => {
+    upiBox.scrollIntoView({ behavior: 'smooth' });
+  });
+}
