@@ -416,24 +416,31 @@ if (templeBellBtn) {
   });
 }
 
-/* Perform Pooja Handler */
+/* Perform Pooja Handler with Ganapathi Astothara Satha Naamavali Audio */
 const poojaBtn = document.getElementById('pooja-btn');
+const poojaAshtotharamAudio = document.getElementById('pooja-ashtotharam-audio');
 const pujaModal = document.getElementById('puja-modal');
 const closePujaModalBtn = document.getElementById('close-puja-modal');
 const modalHundiBtn = document.getElementById('modal-hundi-btn');
 
 if (poojaBtn) {
   poojaBtn.addEventListener('click', () => {
-    // 1. Play Ganapathi devotional audio track from public folder
+    // 1. Play Ganapathi Astothara Satha Naamavali audio track
     if (bgAudioPlayer) {
-      bgAudioPlayer.currentTime = 0;
-      bgAudioPlayer.play().then(() => {
+      bgAudioPlayer.pause();
+    }
+    if (poojaAshtotharamAudio) {
+      poojaAshtotharamAudio.currentTime = 0;
+      poojaAshtotharamAudio.play().then(() => {
         isAudioPlaying = true;
         if (audioToggleBtn) {
           audioToggleBtn.classList.add('active-toggle');
-          audioToggleBtn.querySelector('.audio-text').innerText = 'MUSIC ON 🎵';
+          audioToggleBtn.querySelector('.audio-text').innerText = 'ASTOTHARAM 🎵';
         }
-      }).catch(err => console.log("Audio play error:", err));
+      }).catch(err => console.log("Ashtotharam audio play error:", err));
+    } else if (bgAudioPlayer) {
+      bgAudioPlayer.currentTime = 0;
+      bgAudioPlayer.play().catch(err => console.log("Audio play error:", err));
     }
 
     // 2. Light Aarti aura & Ring temple bell chime
