@@ -6,8 +6,11 @@
 
 :root {
   --orange: #FF5A00;
+  --saffron: #E64A19;
   --white: #FFFFFF;
-  --soft-tint: #FFF1E8;
+  --soft-tint: #FFF3E6;
+  --devotional-bg: #FFFDF9;
+  --card-bg: #FFFFFF;
 
   --font-sans: 'Instrument Sans', -apple-system, sans-serif;
   --font-serif: 'Instrument Serif', Georgia, serif;
@@ -25,7 +28,7 @@
 html {
   scroll-behavior: smooth;
   font-family: var(--font-sans);
-  background-color: var(--white);
+  background-color: var(--devotional-bg);
   color: var(--orange);
   overflow-x: hidden;
   width: 100%;
@@ -36,7 +39,7 @@ body {
   width: 100%;
   max-width: 100vw;
   overflow-x: hidden;
-  background-color: var(--white);
+  background: radial-gradient(circle at 50% 0%, #FFF3E6 0%, #FFF9F3 40%, #FFFDF9 100%);
   line-height: 1.4;
   -webkit-font-smoothing: antialiased;
 }
@@ -61,15 +64,16 @@ body {
 /* Sacred Mantra Ticker Bar */
 .sacred-mantra-bar {
   margin-top: 58px;
-  background-color: var(--orange);
+  background: linear-gradient(90deg, #FF5A00 0%, #E64A19 50%, #FF5A00 100%);
   color: var(--white);
-  height: 36px;
+  height: 38px;
   display: flex;
   align-items: center;
   overflow: hidden;
   position: relative;
   z-index: 45;
   border-bottom: 2px solid var(--orange);
+  box-shadow: 0 4px 12px rgba(255, 90, 0, 0.15);
 }
 
 .mantra-track {
@@ -577,6 +581,10 @@ img {
   justify-content: center;
   text-align: center;
   width: 100%;
+  padding: 24px 16px 20px 16px;
+  background: radial-gradient(circle at 50% 45%, #FFFFFF 0%, #FFF5EB 70%, #FFEAD5 100%);
+  border: 2.5px solid var(--orange);
+  box-shadow: 0 12px 36px rgba(255, 90, 0, 0.12), inset 0 0 20px rgba(255, 179, 0, 0.15);
 }
 
 .idol-black-glow {
