@@ -334,3 +334,84 @@ if (parallaxText) {
     parallaxText.style.transform = `translateX(${-scrollPos * 0.15}px)`;
   });
 }
+
+
+/* ==========================================================================
+   9. INTERACTIVE DEVOTIONAL OFFERINGS (AARTI, FLOWERS, TEMPLE BELL)
+   ========================================================================== */
+function playTempleBellSound() {
+  try {
+    const AudioCtx = window.AudioContext || window.webkitAudioContext;
+    if (!AudioCtx) return;
+    const audioCtx = new AudioCtx();
+    const osc1 = audioCtx.createOscillator();
+    const osc2 = audioCtx.createOscillator();
+    const gain = audioCtx.createGain();
+
+    osc1.type = 'sine';
+    osc2.type = 'sine';
+
+    osc1.frequency.setValueAtTime(1180, audioCtx.currentTime);
+    osc2.frequency.setValueAtTime(2360, audioCtx.currentTime);
+
+    gain.gain.setValueAtTime(0.35, audioCtx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 2.2);
+
+    osc1.connect(gain);
+    osc2.connect(gain);
+    gain.connect(audioCtx.destination);
+
+    osc1.start();
+    osc2.start();
+    osc1.stop(audioCtx.currentTime + 2.2);
+    osc2.stop(audioCtx.currentTime + 2.2);
+  } catch (err) {
+    console.log("Temple bell sound error:", err);
+  }
+}
+
+const aartiBtn = document.getElementById('aarti-btn');
+const diyaGlow = document.getElementById('diya-glow');
+const flowerOfferBtn = document.getElementById('flower-offer-btn');
+const templeBellBtn = document.getElementById('temple-bell-btn');
+const blessingCountEl = document.getElementById('blessing-count');
+
+let isAartiLit = false;
+let currentBlessingCount = 848;
+
+if (aartiBtn) {
+  aartiBtn.addEventListener('click', () => {
+    isAartiLit = !isAartiLit;
+    if (isAartiLit) {
+      aartiBtn.classList.add('active');
+      if (diyaGlow) diyaGlow.classList.add('active');
+      showToast('🪔 VIRTUAL AARTI LIT! MAY LORD GANESHA BLESS YOU!');
+      playTempleBellSound();
+    } else {
+      aartiBtn.classList.remove('active');
+      if (diyaGlow) diyaGlow.classList.remove('active');
+    }
+  });
+}
+
+if (flowerOfferBtn) {
+  flowerOfferBtn.addEventListener('click', () => {
+    currentBlessingCount++;
+    if (blessingCountEl) blessingCountEl.innerText = currentBlessingCount;
+    showToast('🌺 FLOWERS OFFERED: ॥ ॐ गं गणपतये नमः ॥');
+    initPetals();
+    if (!isPetalsActive) {
+      const petalsToggle = document.getElementById('petals-toggle');
+      if (petalsToggle) petalsToggle.click();
+    }
+  });
+}
+
+if (templeBellBtn) {
+  templeBellBtn.addEventListener('click', () => {
+    playTempleBellSound();
+    templeBellBtn.classList.add('active');
+    setTimeout(() => templeBellBtn.classList.remove('active'), 600);
+    showToast('🔔 TEMPLE BELL RANG! ॥ శ్రీ వరసిద్ధి వినాయక స్వామి ॥');
+  });
+}
